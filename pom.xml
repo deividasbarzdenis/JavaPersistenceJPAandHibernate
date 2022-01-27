@@ -11,6 +11,7 @@
     <modules>
         <module>Part2_Many_to_many_relationships</module>
         <module>CompositeKeysInJPA_Hibernate</module>
+        <module>InheritanceRelationshipsInJPA_And_Hibernate</module>
     </modules>
 
     <name>JavaPersistenceJPAandHibernate</name>
