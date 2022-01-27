@@ -1,0 +1,34 @@
+<!--
+The persistence.xml file begins with a persistence node that can contain one or more persistence-units.
+A persistence-unit has a name, which we'll use later when we create the EntityManager, and it defines the attributes
+of that unit. In this case, we configure properties in this unit to do the following:
+   - Specify HibernatePersistenceProvider, so the application knows we're using Hibernate as our JPA provider.
+   - Define two entities: a Book class and an Author class.
+   - Define the database configuration via JDBC. In this case, we're using an in-memory H2 instance.
+   - Configure Hibernate, including setting the Hibernate dialect to H2Dialect, so that Hibernate knows how
+    to communicate with the H2 database.
+-->
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="SuperHeroes" transaction-type="RESOURCE_LOCAL">
+        <!-- Persistence provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Entity classes -->
+        <class>model.Movie</class>
+        <class>model.SuperHero</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:moviedb" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
