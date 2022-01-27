@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Part2_Many_to_many_relationships" />
+        <module name="CompositeKeysInJPA_Hibernate" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CompositeKeysJPA&amp;Hibernate" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
