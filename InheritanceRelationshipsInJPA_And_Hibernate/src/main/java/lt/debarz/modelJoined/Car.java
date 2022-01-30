@@ -1,4 +1,4 @@
-package main.java.lt.debarz.modelJoined;
+package lt.debarz.modelJoined;
 
 import lombok.Data;
 

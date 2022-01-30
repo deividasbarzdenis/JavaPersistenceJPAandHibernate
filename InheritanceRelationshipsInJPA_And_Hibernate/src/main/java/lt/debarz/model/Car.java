@@ -1,4 +1,4 @@
-package main.java.lt.debarz.model;
+package lt.debarz.model;
 
 import lombok.Data;
 
